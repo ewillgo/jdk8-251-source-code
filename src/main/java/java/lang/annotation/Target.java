@@ -31,9 +31,15 @@ package java.lang.annotation;
  * applicable are specified in JLS 9.6.4.1, and denoted in source code by enum
  * constants of {@link ElementType java.lang.annotation.ElementType}.
  *
+ * 指定这个注解适用于上下文的哪些环境，
+ * 声明上下文和类型上下文可以使用哪些注解类型请参考《JLS》9.6.4.1章节，
+ * 和在源代码中通过java.lang.annotation.ElementType的枚举常量进行表示
+ *
  * <p>If an {@code @Target} meta-annotation is not present on an annotation type
  * {@code T} , then an annotation of type {@code T} may be written as a
  * modifier for any declaration except a type parameter declaration.
+ *
+ *
  *
  * <p>If an {@code @Target} meta-annotation is present, the compiler will enforce
  * the usage restrictions indicated by {@code ElementType}

@@ -32,10 +32,15 @@ package java.lang.annotation;
  * meta-annotations to specify where it is legal to write annotations of a
  * given type.
  *
+ * 这些枚举常量可以为自定义注解提供一套可以出现在java程序位置的语法规范
+ * 这些被用于@Target元注解里的枚举常量指定一个给定类型的注解可以编写在代码的哪个位置（类、接口、方法？等等...）
+ *
  * <p>The syntactic locations where annotations may appear are split into
  * <em>declaration contexts</em> , where annotations apply to declarations, and
  * <em>type contexts</em> , where annotations apply to types used in
  * declarations and expressions.
+ *
+ * 这些语法规则指定注解可以出现在声明上下文的哪些地方，可以应用于哪些声明和类型的上下文环境，
  *
  * <p>The constants {@link #ANNOTATION_TYPE} , {@link #CONSTRUCTOR} , {@link
  * #FIELD} , {@link #LOCAL_VARIABLE} , {@link #METHOD} , {@link #PACKAGE} ,
@@ -71,32 +76,34 @@ package java.lang.annotation;
  * @jls 4.1 The Kinds of Types and Values
  */
 public enum ElementType {
-    /** Class, interface (including annotation type), or enum declaration */
+    /** Class, interface (including annotation type), or enum declaration 类、接口（包括注解的注解），枚举 注解 */
     TYPE,
 
-    /** Field declaration (includes enum constants) */
+    /** Field declaration (includes enum constants) 类字段注解 */
     FIELD,
 
-    /** Method declaration */
+    /** Method declaration 方法注解 */
     METHOD,
 
-    /** Formal parameter declaration */
+    /** Formal parameter declaration 入参注解 */
     PARAMETER,
 
-    /** Constructor declaration */
+    /** Constructor declaration 构造函数注解 */
     CONSTRUCTOR,
 
-    /** Local variable declaration */
+    /** Local variable declaration 局部变量注解 */
     LOCAL_VARIABLE,
 
-    /** Annotation type declaration */
+    /** Annotation type declaration 注解的注解 */
     ANNOTATION_TYPE,
 
-    /** Package declaration */
+    /** Package declaration 包注解 */
     PACKAGE,
 
     /**
      * Type parameter declaration
+     *
+     * 泛型上的注解
      *
      * @since 1.8
      */
@@ -104,6 +111,8 @@ public enum ElementType {
 
     /**
      * Use of a type
+     *
+     * 主要用于约束类的注解
      *
      * @since 1.8
      */

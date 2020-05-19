@@ -34,7 +34,7 @@ package java.lang.annotation;
  * of the annotated elements.
  *
  * 指定自定义注解是可以被javadoc命令或其它类似的文档工具进行文档化
- * 这个类型应该被用于当客户端想让使用者知道元素如何使用的时候才进行声明
+ * 这个类型的声明应该被用于当客户端想让使用者知道元素如何使用的时候才进行声明
  * 如果一个注解类型被加上了@Documented，则被添加注解的元素对象就会成为公共API的一部分
  *
  * @author  Joshua Bloch
