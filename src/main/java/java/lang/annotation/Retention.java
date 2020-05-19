@@ -31,7 +31,7 @@ package java.lang.annotation;
  * an annotation type declaration, the retention policy defaults to
  * {@code RetentionPolicy.CLASS}.
  *
- * 指定注解的在VM中的保存策略，如果自定义注解没有出现@Retention，
+ * 指定自定义注解的保存策略，如果自定义注解没有出现@Retention，
  * 则缺省的保存策略是：RetentionPolicy.CLASS
  *
  * <p>A Retention meta-annotation has effect only if the
